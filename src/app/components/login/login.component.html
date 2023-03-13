@@ -1,0 +1,33 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-5 mx-auto text-center">
+            <div class="login-right">
+                <form #loginForm="ngForm" (ngSubmit)="login()">
+                    <div class="sign-in">
+                        <h4>Correo electronico :</h4>
+                        <input type="text" required [(ngModel)]="nombreInput" name="nombre">
+                    </div>
+                    <div class="sign-in">
+                        <h4>Contraseña :</h4>
+                        <input *ngIf="!mostrarTexto" type="password" required [(ngModel)]="claveInput" name="clave">
+                        <input *ngIf="mostrarTexto" type="text" required [(ngModel)]="claveInput" name="clave">
+                        <br>
+                        <p *ngIf="!mostrarTexto" (click)="this.mostrarTexto = !this.mostrarTexto">Ver contraseña</p>
+                        <p *ngIf="mostrarTexto" (click)="this.mostrarTexto = !this.mostrarTexto">Ocultar contraseña</p>
+                        <!-- <a>Olvidaste tu contraseña?</a> -->
+                        <!-- <a>Registrate</a> -->
+                    </div>
+                    <div class="single-bottom">
+                        <input type="checkbox" id="brand" value="" (click)="rememberMe()" checked *ngIf="saveMyData">
+                        <input type="checkbox" id="brand" value="" (click)="rememberMe()" *ngIf="!saveMyData">
+                        <label for="brand"><span></span>Recordar mis datos.</label>
+                    </div>
+                    <div class="sign-in">
+                        <input type="submit" value="INICIAR SESION">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
