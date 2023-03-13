@@ -7,18 +7,26 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-
+  //input nombre [(ngModel)]
   nombreInput: string = "";
+  //input contraseña [(ngModel)]
   claveInput: string = "";
+  //check box save data [(ngModel)]
   saveMyData = false;
+  //Hiden text password
   mostrarTexto: boolean = false;
 
-  async login() {
+  //Function login
+  login() {
 
+    //valid void or empty inputs
     if (!this.nombreInput || !this.claveInput) {
       alert ("Por favor completa todos los campos para continuar")
       return
     }
+
+    //Inputs isNotempty
+    //Valid user
 
     if (this.saveMyData) {
       //sesion permanente
@@ -28,8 +36,4 @@ export class LoginComponent {
     }
   }
 
-  //Permanencia de la sesión
-  rememberMe() {
-    this.saveMyData ? this.saveMyData = false : this.saveMyData = true;
-  }
 }

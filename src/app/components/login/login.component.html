@@ -19,8 +19,8 @@
                         <!-- <a>Registrate</a> -->
                     </div>
                     <div class="single-bottom">
-                        <input type="checkbox" id="brand" value="" (click)="rememberMe()" checked *ngIf="saveMyData">
-                        <input type="checkbox" id="brand" value="" (click)="rememberMe()" *ngIf="!saveMyData">
+                        <input type="checkbox" id="brand" value="" (click)="saveMyData = !saveMyData" checked *ngIf="saveMyData">
+                        <input type="checkbox" id="brand" value="" (click)="saveMyData = !saveMyData" *ngIf="!saveMyData">
                         <label for="brand"><span></span>Recordar mis datos.</label>
                     </div>
                     <div class="sign-in">
