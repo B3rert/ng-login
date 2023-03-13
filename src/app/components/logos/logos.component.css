@@ -1,0 +1,28 @@
+
+/**Logos*/
+
+.img_empresas {
+    height      : 110px;
+    margin-top  : 20px;
+    margin-right: 20px;
+    margin-left : 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .img_empresas {
+        height: 65px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .img_empresas {
+        height: 45px;
+        margin: 5px;
+    }
+}
+/*Fin logos*/
+
+.spacer {
+    flex: 1 1 auto;
+}
