@@ -16,7 +16,7 @@
                     <div class="sign-in">
                         <h4>Contraseña :</h4>
                         <input *ngIf="!mostrarTexto" type="password" required [(ngModel)]="claveInput" name="clave">
-                        <input *ngIf="mostrarTexto" type="text" required [(ngModel)]="claveInput" name="clave">
+                        <input *ngIf="mostrarTexto" type="text" required [(ngModel)]="claveInput" name="clave" autocomplete="off">
                         <br>
                         <p *ngIf="!mostrarTexto" (click)="this.mostrarTexto = !this.mostrarTexto">Ver contraseña</p>
                         <p *ngIf="mostrarTexto" (click)="this.mostrarTexto = !this.mostrarTexto">Ocultar contraseña</p>
